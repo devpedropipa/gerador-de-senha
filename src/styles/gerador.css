@@ -1,0 +1,212 @@
+/* Conteúdo do site */
+#conteudo-site {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: 65dvh;
+}
+
+/* Título */
+h1 {
+    font-size: 2.5em;
+    text-align: center;
+    color: var(--corTitulo);
+    text-shadow: var(--sombraElemento);
+}
+
+/* Card do gerador */
+#card {
+    padding: 30px;
+    background-color: #bdbdbd;
+    width: 500px;
+    height: auto;
+    border-radius: 35px;
+    box-shadow: var(--sombraElemento);
+}
+
+#conteudo-card {
+    position: relative;
+    margin: auto;
+    width: 85%;
+    height: 100%;
+}
+
+/* Input de senha gerada */
+#container-senha {
+    position: relative;
+    text-align: center;
+}
+
+#senha-gerada {
+    width: 100%;
+    font-size: 16px;
+    border: 1px solid var(--corFundoInput);
+    border-radius: 10px;
+    outline: none;
+    background-color: var(--corFundoInput);
+    padding: 6px 6px 6px 10px;
+}
+
+#senha-gerada:focus {
+    border-color: var(--corInput);
+    background-color: var(--corFundoInputFocus);
+}
+
+/* Ícone do input */
+#img-copiar {
+    position: absolute;
+    top: 6px;
+    right: 12px;
+    width: 20px;
+    cursor: pointer;
+}
+
+/* Input range */
+#container-range {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 24px 0px;
+}
+
+#input-range {
+    appearance: none;
+    width: 100%;
+    border-radius: 20px;
+    margin-right: 24px;
+}
+
+#input-range::-webkit-slider-runnable-track {
+    height: var(--heightTrack);
+    border-radius: 20px;
+    background-color: var(--corInput);
+}
+
+#input-range:hover::-webkit-slider-runnable-track {
+    background-color: var(--corInputHover);
+}
+
+#input-range:active::-webkit-slider-runnable-track {
+    background-color: var(--corInputActive);
+}
+
+#input-range::-webkit-slider-thumb {
+    appearance: none;
+    width: var(--tamThumb);
+    height: var(--tamThumb);
+    border-radius: 50%;
+    background-color: var(--corFundoInput);
+    position: relative;
+    bottom: 4px;
+    cursor: grab;
+}
+
+#input-range:hover::-webkit-slider-thumb {
+    background-color: var(--corFundoInputHover);
+}
+
+#input-range:active::-webkit-slider-thumb {
+    background-color: var(--corFundoInputActive);
+}
+
+#input-range:focus {
+    outline: 0;
+    border: 0;
+}
+
+/* Input number */
+#quant-caracteres {
+    background-color: var(--corFundoInput);
+    border: 1px solid var(--corFundoInput);
+    padding: 4px;
+    outline: none;
+    border-radius: 6px;
+    width: 42px;
+    text-align: center;
+    font-size: 16px;
+}
+
+#quant-caracteres:focus {
+    border-color: var(--corInput);
+    background-color: var(--corFundoInputFocus);
+}
+
+#quant-caracteres::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+}
+
+/* Input checkbox */
+#container-config {
+    display: grid;
+    font-size: 18px;
+    width: 100%;
+    margin: auto;
+    gap: 14px;
+}
+
+.check-config {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    margin-right: 14px;
+    background-color: var(--corFundoInput);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.check-config:hover {
+    background-color: var(--corFundoInputHover);
+}
+
+.check-config:active {
+    background-color: var(--corFundoInputActive);
+}
+
+.check-config:checked {
+    background-color: var(--corInput);
+}
+
+.check-config:checked::after {
+    content: "";
+    display: block;
+    background-image: url("../assets/selecionado.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 90%;
+}
+
+.check-config:checked:hover {
+    background-color: var(--corInputHover);
+}
+
+.check-config:checked:active {
+    background-color: var(--corInputActive);
+}
+
+.check-nome {
+    position: relative;
+    bottom: 4px;
+}
+
+/* Botão */
+#gerar-senha {
+    margin-top: 2em;
+    padding: 18px;
+    font-size: 16px;
+    width: 100%;
+    background-color: var(--corInput);
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+#gerar-senha:hover {
+    background-color: var(--corInputHover);
+}
+
+#gerar-senha:active {
+    background-color: var(--corInputActive);
+}
