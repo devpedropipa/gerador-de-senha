@@ -37,7 +37,7 @@ function App() {
             !configGeradorSenha[2] &&
             !configGeradorSenha[3]
         ) {
-            alert("Deixa pelo menos 1 caixa marcada.");
+            alert("Selecione no mínimo uma opção.");
         } else {
             const listaCaracteres = [
                 "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
@@ -56,10 +56,19 @@ function App() {
 
                 if (configGeradorSenha[i]) {
                     senha += listaCaracteres[i][codigo];
-                    c++
+                    c++;
                 }
             }
-            setSenhaGerada(senha)
+            setSenhaGerada(senha);
+        }
+    }
+
+    function copiarSenha() {
+        if (senhaGerada) {
+            navigator.clipboard.writeText(senhaGerada);
+            alert("Senha copiada.")
+        } else {
+            alert("A senha não foi gerada.");
         }
     }
 
@@ -78,7 +87,12 @@ function App() {
                             value={senhaGerada}
                             readOnly
                         />
-                        <img src={copyImg} alt="ícone-copiar" id="img-copiar" />
+                        <img
+                            src={copyImg}
+                            alt="ícone-copiar"
+                            id="img-copiar"
+                            onClick={copiarSenha}
+                        />
                     </div>
                     {/* Quantidade de caracteres */}
                     <div id="container-range">
