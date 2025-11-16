@@ -5,7 +5,7 @@ import "./styles/gerador.css";
 /* Componentes */
 import { InputGerador } from "./components/input-gerador";
 import { InputRange } from "./components/input-range";
-import { GerarSenha } from "./components/gerar-senha";
+import { BotaoGerarSenha } from "./components/botao-gerar-senha";
 import { ConfigGerador } from "./components/config-gerador";
 
 import { useState } from "react";
@@ -31,10 +31,35 @@ function App() {
             {/* Gerador de senhas */}
             <div id="card">
                 <main id="conteudo-card">
-                    <InputGerador />
-                    <InputRange />
-                    <ConfigGerador />
-                    <GerarSenha />
+                    <InputGerador senha={senhaGerada} />
+                    <InputRange tamanho={quantCar} setTamanho={setQuantCar} />
+                    <div id="container-config">
+                        <ConfigGerador
+                            checkNome="Letra Maiúscula"
+                            checkValue={checkLetraMaiuscula}
+                            checkSet={setCheckLetraMaiuscula}
+                        />
+                        <ConfigGerador
+                            checkNome="Letra Minúscula"
+                            checkValue={checkLetraMinuscula}
+                            checkSet={setCheckLetraMinuscula}
+                        />
+                        <ConfigGerador
+                            checkNome="Número"
+                            checkValue={checkNumero}
+                            checkSet={setCheckNumero}
+                        />
+                        <ConfigGerador
+                            checkNome="Símbolo"
+                            checkValue={checkSimbolo}
+                            checkSet={setCheckSimbolo}
+                        />
+                    </div>
+                    <BotaoGerarSenha
+                        setNovaSenha={setSenhaGerada}
+                        checkBox={configGeradorSenha}
+                        tamanhoSenha={quantCar}
+                    />
                 </main>
             </div>
         </main>

@@ -1,12 +1,16 @@
 import copyImg from "../assets/copiar.png";
 
-export function InputGerador() {
+interface PropsGerador {
+    senha: string;
+}
+
+export function InputGerador(props: PropsGerador) {
     function copiarSenha() {
-        if (senhaGerada) {
-            navigator.clipboard.writeText(senhaGerada);
-            alert("Senha copiada.");
+        if (props.senha) {
+            navigator.clipboard.writeText(props.senha);
+            window.alert("Senha copiada.");
         } else {
-            alert("A senha não foi gerada.");
+            window.alert("A senha não foi gerada.");
         }
     }
 
@@ -16,7 +20,7 @@ export function InputGerador() {
                 type="text"
                 name="input-senha"
                 id="senha-gerada"
-                value={senhaGerada}
+                value={props.senha}
                 readOnly
             />
             <img
