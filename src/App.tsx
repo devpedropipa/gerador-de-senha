@@ -1,6 +1,10 @@
 /* Arquivos de estilo */
 
 import "./styles/gerador.css";
+import "./styles/input-gerador.css"
+import "./styles/input-range.css"
+import "./styles/config-gerador.css"
+import "./styles/botao-gerar-senha.css"
 
 /* Componentes */
 import { InputGerador } from "./components/input-gerador";
@@ -8,6 +12,7 @@ import { InputRange } from "./components/input-range";
 import { BotaoGerarSenha } from "./components/botao-gerar-senha";
 import { ConfigGerador } from "./components/config-gerador";
 
+/* Dependências */
 import { useState } from "react";
 
 function App() {

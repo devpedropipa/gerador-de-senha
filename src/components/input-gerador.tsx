@@ -21,6 +21,7 @@ export function InputGerador(props: PropsGerador) {
                 name="input-senha"
                 id="senha-gerada"
                 value={props.senha}
+                placeholder="Sua senha aparecerá aqui"
                 readOnly
             />
             <img

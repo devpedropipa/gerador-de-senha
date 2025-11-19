@@ -1,0 +1,29 @@
+/* Input de senha gerada */
+#container-senha {
+    position: relative;
+    text-align: center;
+}
+
+#senha-gerada {
+    width: 100%;
+    font-size: 16px;
+    border: 1px solid var(--corFundoInput);
+    border-radius: 10px;
+    outline: none;
+    background-color: var(--corFundoInput);
+    padding: 6px 6px 6px 10px;
+}
+
+#senha-gerada:focus {
+    border-color: var(--corInput);
+    background-color: var(--corFundoInputFocus);
+}
+
+/* Ícone do input */
+#img-copiar {
+    position: absolute;
+    top: 6px;
+    right: 12px;
+    width: 20px;
+    cursor: pointer;
+}
