@@ -1,10 +1,14 @@
+/* Imagem */
 import copyIcon from "../assets/copiar.svg";
 
+/* Interface do componente */
 interface PropsGerador {
     senha: string;
 }
 
+/* Input onde a senha é mostrada */
 export function InputGerador(props: PropsGerador) {
+    /* Copia a senha */
     function copiarSenha() {
         if (props.senha) {
             navigator.clipboard.writeText(props.senha);

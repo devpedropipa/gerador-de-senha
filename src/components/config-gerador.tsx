@@ -1,9 +1,11 @@
+/* Interface do componente */
 interface PropsConfigGerador {
     checkNome: string;
     checkValue: boolean;
     checkSet: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
+/* Opção de configuração do gerador */
 export function ConfigGerador(props: PropsConfigGerador) {
     return (
         <div>

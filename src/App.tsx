@@ -17,6 +17,7 @@ import { ConfigGerador } from "./components/config-gerador";
 import { useState } from "react";
 
 function App() {
+    /* Variáveis responsáveis pelo funcionamento do projeto */
     const [quantCar, setQuantCar] = useState(8);
     const [checkLetraMaiuscula, setCheckLetraMaiuscula] = useState(false);
     const [checkLetraMinuscula, setCheckLetraMinuscula] = useState(false);
@@ -32,7 +33,7 @@ function App() {
 
     return (
         <main id="conteudo-site">
-            <img src={padlockIcon} alt="cadeado" />
+            <img src={padlockIcon} alt="icone-cadeado" />
             <h1>Gerador de Senha</h1>
 
             {/* Gerador de senhas */}

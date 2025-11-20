@@ -1,8 +1,10 @@
+/* Interface do componente */
 interface PropsInputRange {
     tamanho: number;
     setTamanho: React.Dispatch<React.SetStateAction<number>>;
 }
 
+/* Altera o tamanho da senha */
 export function InputRange(props: PropsInputRange) {
     return (
         <div id="container-range">
