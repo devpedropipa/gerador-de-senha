@@ -1,10 +1,11 @@
-/* Arquivos de estilo */
-
+/* Arquivos */
 import "./styles/gerador.css";
 import "./styles/input-gerador.css"
 import "./styles/input-range.css"
 import "./styles/config-gerador.css"
 import "./styles/botao-gerar-senha.css"
+
+import padlockIcon from "./assets/icone-cadeado.png"
 
 /* Componentes */
 import { InputGerador } from "./components/input-gerador";
@@ -17,8 +18,8 @@ import { useState } from "react";
 
 function App() {
     const [quantCar, setQuantCar] = useState(8);
-    const [checkLetraMaiuscula, setCheckLetraMaiuscula] = useState(true);
-    const [checkLetraMinuscula, setCheckLetraMinuscula] = useState(true);
+    const [checkLetraMaiuscula, setCheckLetraMaiuscula] = useState(false);
+    const [checkLetraMinuscula, setCheckLetraMinuscula] = useState(false);
     const [checkNumero, setCheckNumero] = useState(false);
     const [checkSimbolo, setCheckSimbolo] = useState(false);
     const [senhaGerada, setSenhaGerada] = useState("");
@@ -31,7 +32,8 @@ function App() {
 
     return (
         <main id="conteudo-site">
-            <h1>Gerador de Senhas</h1>
+            <img src={padlockIcon} alt="cadeado" />
+            <h1>Gerador de Senha</h1>
 
             {/* Gerador de senhas */}
             <div id="card">

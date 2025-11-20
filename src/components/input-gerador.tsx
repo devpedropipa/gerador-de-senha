@@ -1,4 +1,4 @@
-import copyImg from "../assets/copiar.png";
+import copyIcon from "../assets/copiar.svg";
 
 interface PropsGerador {
     senha: string;
@@ -24,12 +24,7 @@ export function InputGerador(props: PropsGerador) {
                 placeholder="Sua senha aparecerá aqui"
                 readOnly
             />
-            <img
-                src={copyImg}
-                alt="ícone-copiar"
-                id="img-copiar"
-                onClick={copiarSenha}
-            />
+            <img src={copyIcon} alt="ícone-copiar" onClick={copiarSenha} />
         </div>
     );
 }
