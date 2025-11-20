@@ -5,7 +5,7 @@
 .check-config {
     position: relative;
     appearance: none;
-    background-color: var(--input);
+    background-color: var(--inputPrincipal);
     width: 25px;
     height: 25px;
     border: 1px solid var(--bordaPrincipal);
@@ -14,9 +14,17 @@
     cursor: pointer;
 }
 
+.check-config:active {
+    background-color: var(--inputPrincipalActive);
+}
+
 .check-config:checked {
-    background-color: var(--inputChecked);
+    background-color: var(--inputSecundario);
     border: 1px solid var(--bordaSecundaria);
+}
+
+.check-config:checked:active {
+    background-color: var(--inputSecundarioActive);
 }
 
 .check-config:checked::after {

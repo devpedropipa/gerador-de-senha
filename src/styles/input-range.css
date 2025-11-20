@@ -4,7 +4,7 @@
 
 #input-range {
     appearance: none;
-    background-color: var(--inputRange);
+    background-color: var(--inputSecundario);
     border-radius: 20px;
     width: 80%;
     height: 10px;
@@ -16,17 +16,19 @@
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background-color: var(--inputRange);
+    background-color: var(--inputSecundario);
 }
 
-#input-range:active, #input-range:active::-webkit-slider-thumb {
-    background-color: var(--inputRangeActive);
+#input-range:active,
+#input-range:active::-webkit-slider-thumb {
+    background-color: var(--inputSecundarioActive);
 }
+
 
 #input-number {
     width: 40px;
     text-align: center;
-    background-color: var(--input);
+    background-color: var(--inputPrincipal);
     border: 1px solid var(--bordaPrincipal);
     border-radius: 8px;
     outline: 0;
@@ -35,4 +37,8 @@
 
 #input-number::-webkit-inner-spin-button {
     appearance: none;
+}
+
+#input-number:focus {
+    background-color: var(--inputPrincipalFocus);
 }

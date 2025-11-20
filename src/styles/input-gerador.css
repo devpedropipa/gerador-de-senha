@@ -3,7 +3,7 @@
 }
 
 #senha-gerada {
-    background-color: var(--input);
+    background-color: var(--inputPrincipal);
     padding-left: 10px;
     width: 100%;
     height: 48px;
@@ -11,6 +11,10 @@
     border-radius: 8px;
     outline: 0;
     font-size: 16px;
+}
+
+#senha-gerada:focus {
+    background-color: var(--inputPrincipalFocus);
 }
 
 #icone-copiar {
