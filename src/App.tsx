@@ -1,16 +1,16 @@
 /* Arquivos */
-import "./styles/gerador.css";
-import "./styles/input-gerador.css"
-import "./styles/input-range.css"
-import "./styles/config-gerador.css"
-import "./styles/botao-gerar-senha.css"
+import "./styles/card.css";
+import "./styles/input-gerador.css";
+import "./styles/input-range.css";
+import "./styles/config-gerador.css";
+import "./styles/botao-gerador.css";
 
-import padlockIcon from "./assets/icone-cadeado.png"
+import padlockIcon from "./assets/icone-cadeado.png";
 
 /* Componentes */
 import { InputGerador } from "./components/input-gerador";
 import { InputRange } from "./components/input-range";
-import { BotaoGerarSenha } from "./components/botao-gerar-senha";
+import { BotaoGerador } from "./components/botao-gerador";
 import { ConfigGerador } from "./components/config-gerador";
 
 /* Dependências */
@@ -32,43 +32,41 @@ function App() {
     ];
 
     return (
-        <main id="conteudo-site">
-            <img src={padlockIcon} alt="icone-cadeado" />
+        <main id="conteudo">
+            <img src={padlockIcon} alt="icone-cadeado" id="icone-cadeado" />
             <h1>Gerador de Senha</h1>
 
             {/* Gerador de senhas */}
             <div id="card">
-                <main id="conteudo-card">
-                    <InputGerador senha={senhaGerada} />
-                    <InputRange tamanho={quantCar} setTamanho={setQuantCar} />
-                    <div id="container-config">
-                        <ConfigGerador
-                            checkNome="Letra Maiúscula"
-                            checkValue={checkLetraMaiuscula}
-                            checkSet={setCheckLetraMaiuscula}
-                        />
-                        <ConfigGerador
-                            checkNome="Letra Minúscula"
-                            checkValue={checkLetraMinuscula}
-                            checkSet={setCheckLetraMinuscula}
-                        />
-                        <ConfigGerador
-                            checkNome="Número"
-                            checkValue={checkNumero}
-                            checkSet={setCheckNumero}
-                        />
-                        <ConfigGerador
-                            checkNome="Símbolo"
-                            checkValue={checkSimbolo}
-                            checkSet={setCheckSimbolo}
-                        />
-                    </div>
-                    <BotaoGerarSenha
-                        setNovaSenha={setSenhaGerada}
-                        checkBox={configGeradorSenha}
-                        tamanhoSenha={quantCar}
+                <InputGerador senha={senhaGerada} />
+                <InputRange tamanho={quantCar} setTamanho={setQuantCar} />
+                <div id="container-config">
+                    <ConfigGerador
+                        checkNome="Letra Maiúscula"
+                        checkValue={checkLetraMaiuscula}
+                        checkSet={setCheckLetraMaiuscula}
                     />
-                </main>
+                    <ConfigGerador
+                        checkNome="Letra Minúscula"
+                        checkValue={checkLetraMinuscula}
+                        checkSet={setCheckLetraMinuscula}
+                    />
+                    <ConfigGerador
+                        checkNome="Número"
+                        checkValue={checkNumero}
+                        checkSet={setCheckNumero}
+                    />
+                    <ConfigGerador
+                        checkNome="Símbolo"
+                        checkValue={checkSimbolo}
+                        checkSet={setCheckSimbolo}
+                    />
+                </div>
+                <BotaoGerador
+                    setNovaSenha={setSenhaGerada}
+                    checkBox={configGeradorSenha}
+                    tamanhoSenha={quantCar}
+                />
             </div>
         </main>
     );

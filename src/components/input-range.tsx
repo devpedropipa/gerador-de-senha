@@ -10,7 +10,7 @@ export function InputRange(props: PropsInputRange) {
         <div id="container-range">
             <input
                 type="range"
-                name="input-caract"
+                name="input-range"
                 id="input-range"
                 min={4}
                 max={20}
@@ -20,7 +20,7 @@ export function InputRange(props: PropsInputRange) {
             <input
                 type="number"
                 name="input-number"
-                id="quant-caracteres"
+                id="input-number"
                 value={props.tamanho}
                 readOnly
             />

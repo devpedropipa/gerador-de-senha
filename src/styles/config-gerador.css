@@ -1,0 +1,32 @@
+.container-check-config {
+    margin-bottom: 6px;
+}
+
+.check-config {
+    position: relative;
+    appearance: none;
+    background-color: var(--input);
+    width: 25px;
+    height: 25px;
+    border: 1px solid var(--bordaPrincipal);
+    border-radius: 8px;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.check-config:checked {
+    background-color: var(--inputChecked);
+    border: 1px solid var(--bordaSecundaria);
+}
+
+.check-config:checked::after {
+    content: url("../assets/selecionado.svg");
+    position: absolute;
+    left: 1.2px;
+    top: 1.4px;
+}
+
+.check-nome {
+    position: relative;
+    bottom: 7px;
+}

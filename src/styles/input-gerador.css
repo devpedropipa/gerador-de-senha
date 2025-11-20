@@ -1,0 +1,27 @@
+#container-senha {
+    position: relative;
+}
+
+#senha-gerada {
+    background-color: var(--input);
+    padding-left: 10px;
+    width: 100%;
+    height: 48px;
+    border: 1px solid var(--bordaPrincipal);
+    border-radius: 8px;
+    outline: 0;
+    font-size: 16px;
+}
+
+#icone-copiar {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 24px;
+    color: var(--copy);
+    cursor: pointer;
+}
+
+#icone-copiar:hover {
+    color: var(--copyHover);
+}

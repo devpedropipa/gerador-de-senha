@@ -1,0 +1,14 @@
+/* Card do projeto */
+#card {
+    background-color: var(--card);
+    width: 380px;
+    height: 100%;
+    border: 1px solid var(--bordaPrincipal);
+    border-radius: 20px;
+    padding: 1em;
+}
+
+/* Cor da fonte dos inputs */
+input, span, button {
+    color: var(--textoSecundario);
+}

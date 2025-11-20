@@ -1,10 +1,48 @@
+/* Área de preparação */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
 
 body {
+    background-color: var(--background);
     height: 100dvh;
+}
+
+:root {
+    --background: #0b0e11;
+    --card: #14181f;
+    --bordaPrincipal: #1e232d;
+    --bordaSecundaria: #4770e0;
+    --input: #0f131a;
+    --inputRange: #2962ff;
+    --inputRangeActive: #2353d6;
+    --inputChecked: #2962ff;
+    --textoPrincipal: #e6eaf0;
+    --textoSecundario: #9aa0aa;
+    --botao: #2962ff;
+    --botaoActive: #2155d8;
+    --botaoFonteCor: #d6dadf;
+    --copy: #2962ff;
+    --copyHover: #3d73ff;
+    --success: #2ecc71;
+    --failed: #cc2e2e;
+}
+
+main {
+    display: grid;
+    place-items: center;
+}
+
+h1 {
+    margin: 16px 0;
+    color: var(--textoPrincipal);
+}
+
+#icone-cadeado {
+    margin-top: 1.4em;
 }

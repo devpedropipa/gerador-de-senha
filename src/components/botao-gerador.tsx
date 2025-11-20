@@ -1,12 +1,12 @@
 /* Interface do componente */
-interface PropsBotaoGerarSenha {
+interface PropsBotaoGerador {
     setNovaSenha: React.Dispatch<React.SetStateAction<string>>;
     checkBox: boolean[];
     tamanhoSenha: number;
 }
 
 /* Gera uma senha */
-function gerarSenha(props: PropsBotaoGerarSenha) {
+function gerarSenha(props: PropsBotaoGerador) {
     if (
         !props.checkBox[0] &&
         !props.checkBox[1] &&
@@ -39,7 +39,7 @@ function gerarSenha(props: PropsBotaoGerarSenha) {
 }
 
 /* Botão */
-export function BotaoGerarSenha(props: PropsBotaoGerarSenha) {
+export function BotaoGerador(props: PropsBotaoGerador) {
     return (
         <button id="gerar-senha" onClick={() => gerarSenha(props)}>
             Gerar Senha

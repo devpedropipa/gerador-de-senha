@@ -1,0 +1,38 @@
+#container-range {
+    margin: 1em 0;
+}
+
+#input-range {
+    appearance: none;
+    background-color: var(--inputRange);
+    border-radius: 20px;
+    width: 80%;
+    height: 10px;
+    margin-right: 1.5em;
+}
+
+#input-range::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--inputRange);
+}
+
+#input-range:active, #input-range:active::-webkit-slider-thumb {
+    background-color: var(--inputRangeActive);
+}
+
+#input-number {
+    width: 40px;
+    text-align: center;
+    background-color: var(--input);
+    border: 1px solid var(--bordaPrincipal);
+    border-radius: 8px;
+    outline: 0;
+    padding: 8px;
+}
+
+#input-number::-webkit-inner-spin-button {
+    appearance: none;
+}

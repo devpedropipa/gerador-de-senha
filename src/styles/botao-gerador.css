@@ -1,0 +1,14 @@
+#gerar-senha {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--botao);
+    border: 1px solid var(--bordaSecundaria);
+    border-radius: 8px;
+    color: var(--botaoFonteCor);
+    margin-top: 1em;
+    cursor: pointer;
+}
+
+#gerar-senha:active {
+    background-color: var(--botaoActive);
+}

@@ -8,7 +8,7 @@ interface PropsConfigGerador {
 /* Opção de configuração do gerador */
 export function ConfigGerador(props: PropsConfigGerador) {
     return (
-        <div>
+        <div className="container-check-config">
             <input
                 type="checkbox"
                 name="input-check"
