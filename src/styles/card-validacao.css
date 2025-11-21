@@ -1,0 +1,28 @@
+#card-validacao {
+    position: relative;
+    width: var(--widthCard);
+    border-radius: 6px;
+    padding: 4px 4px 4px 7px;
+    margin-top: 1em;
+}
+
+.validacao-icone {
+    position: absolute;
+    width: 26px;
+    color: white;
+    left: -29px;
+}
+
+.success {
+    background-color: var(--success);
+    border: 1px solid var(--bordaSuccess);
+    border-left: 2em solid var(--bordaSuccess);
+    color: var(--textoValidacao);
+}
+
+.failed {
+    background-color: var(--failed);
+    border: 1px solid var(--bordaFailed);
+    border-left: 2em solid var(--bordaFailed);
+    color: var(--textoValidacao);
+}

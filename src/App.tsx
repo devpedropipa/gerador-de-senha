@@ -4,6 +4,7 @@ import "./styles/input-gerador.css";
 import "./styles/input-range.css";
 import "./styles/config-gerador.css";
 import "./styles/botao-gerador.css";
+import "./styles/card-validacao.css";
 
 import padlockIcon from "./assets/icone-cadeado.png";
 
@@ -12,12 +13,13 @@ import { InputGerador } from "./components/input-gerador";
 import { InputRange } from "./components/input-range";
 import { BotaoGerador } from "./components/botao-gerador";
 import { ConfigGerador } from "./components/config-gerador";
+import { CardValidacao } from "./components/card-validacao";
 
 /* Dependências */
 import { useState } from "react";
 
 function App() {
-    /* Variáveis responsáveis pelo funcionamento do projeto */
+    /* Variáveis de configuração do gerador */
     const [quantCar, setQuantCar] = useState(8);
     const [checkLetraMaiuscula, setCheckLetraMaiuscula] = useState(false);
     const [checkLetraMinuscula, setCheckLetraMinuscula] = useState(false);
@@ -31,6 +33,11 @@ function App() {
         checkSimbolo,
     ];
 
+    /* Variáveis de validação */
+    const [fraseValidacao, setFraseValidacao] = useState("");
+    const [opacityCardValidacao, setOpacityCardValidacao] = useState(true);
+    const [validarSenha, setValidarSenha] = useState(false);
+
     return (
         <main id="conteudo">
             <img src={padlockIcon} alt="icone-cadeado" id="icone-cadeado" />
@@ -38,7 +45,12 @@ function App() {
 
             {/* Gerador de senhas */}
             <div id="card">
-                <InputGerador senha={senhaGerada} />
+                <InputGerador
+                    senha={senhaGerada}
+                    validacao={setValidarSenha}
+                    esconderCardValidacao={setOpacityCardValidacao}
+                    frase={setFraseValidacao}
+                />
                 <InputRange tamanho={quantCar} setTamanho={setQuantCar} />
                 <div id="container-config">
                     <ConfigGerador
@@ -66,8 +78,16 @@ function App() {
                     setNovaSenha={setSenhaGerada}
                     checkBox={configGeradorSenha}
                     tamanhoSenha={quantCar}
+                    esconderCardValidacao={setOpacityCardValidacao}
+                    frase={setFraseValidacao}
+                    validacao={setValidarSenha}
                 />
             </div>
+            <CardValidacao
+                mostrarValidacao={opacityCardValidacao}
+                frase={fraseValidacao}
+                validacao={validarSenha}
+            />
         </main>
     );
 }

@@ -3,6 +3,9 @@ interface PropsBotaoGerador {
     setNovaSenha: React.Dispatch<React.SetStateAction<string>>;
     checkBox: boolean[];
     tamanhoSenha: number;
+    esconderCardValidacao: React.Dispatch<React.SetStateAction<boolean>>;
+    frase: React.Dispatch<React.SetStateAction<string>>;
+    validacao: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 /* Gera uma senha */
@@ -13,7 +16,9 @@ function gerarSenha(props: PropsBotaoGerador) {
         !props.checkBox[2] &&
         !props.checkBox[3]
     ) {
-        window.alert("Selecione no mínimo uma opção.");
+        props.frase("Selecione no mínimo uma opção");
+        props.esconderCardValidacao(false);
+        props.validacao(false);
     } else {
         const listaCaracteres = [
             "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
@@ -35,6 +40,8 @@ function gerarSenha(props: PropsBotaoGerador) {
             }
         }
         props.setNovaSenha(senha);
+        props.esconderCardValidacao(true);
+        props.validacao(true);
     }
 }
 

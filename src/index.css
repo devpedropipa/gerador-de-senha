@@ -16,6 +16,7 @@ body {
 :root {
     --background: #0b0e11;
     --card: #14181f;
+    --widthCard: 380px;
     --bordaPrincipal: #1e232d;
     --bordaSecundaria: #4770e0;
     --inputPrincipal: #0f131a;
@@ -31,7 +32,10 @@ body {
     --copy: #2962ff;
     --copyHover: #3d73ff;
     --success: #2ecc71;
+    --bordaSuccess: #238f50;
     --failed: #cc2e2e;
+    --bordaFailed: #9b2222;
+    --textoValidacao: #0e110f;
 }
 
 main {
