@@ -5,6 +5,7 @@ import "./styles/input-range.css";
 import "./styles/config-gerador.css";
 import "./styles/botao-gerador.css";
 import "./styles/card-validacao.css";
+import "./styles/media-queries.css"
 
 import padlockIcon from "./assets/icone-cadeado.png";
 

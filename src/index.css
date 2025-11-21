@@ -40,7 +40,7 @@ body {
     --textoValidacao: #0e110f;
 }
 
-main {
+#conteudo {
     display: grid;
     place-items: center;
 }

@@ -1,0 +1,68 @@
+@media (max-width: 393px) {
+    #card {
+        width: 90%;
+    }
+
+    #card-validacao {
+        width: calc(90% - 10%);
+    }
+
+    #card-validacao > p {
+        font-size: 14px;
+    }
+
+    .validacao-icone {
+        width: 22px;
+        left: -27px;
+    }
+}
+
+@media (max-width: 360px) {
+    #icone-cadeado {
+        width: 70px;
+    }
+
+    #conteudo > h1 {
+        font-size: 24px;
+    }
+
+    #input-range {
+        width: 75%;
+    }
+
+    #senha-gerada {
+        font-size: 15px;
+    }
+
+    .check-nome {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 320px) {
+    #senha-gerada {
+        font-size: 14px;
+    }
+
+    #icone-copiar {
+        width: 21px;
+        top: 14px;
+    }
+
+    #input-number {
+        font-size: 12px;
+    }
+
+    #input-range {
+        height: 8px;
+    }
+
+    .validacao-icone {
+        width: 19px;
+        left: -26px;
+    }
+
+    #card-validacao > p {
+        font-size: 12px;
+    }
+}
