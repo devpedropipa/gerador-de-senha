@@ -32,9 +32,11 @@ body {
     --copy: #2962ff;
     --copyHover: #3d73ff;
     --success: #2ecc71;
-    --bordaSuccess: #238f50;
+    --successBorda: #238f50;
+    --successIcon: #083f1f;
     --failed: #cc2e2e;
-    --bordaFailed: #9b2222;
+    --failedBorda: #9b2222;
+    --failedIcon: #500b0b;
     --textoValidacao: #0e110f;
 }
 

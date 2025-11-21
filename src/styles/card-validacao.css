@@ -1,6 +1,6 @@
 #card-validacao {
     position: relative;
-    width: var(--widthCard);
+    width: calc(var(--widthCard) - 25px);
     border-radius: 6px;
     padding: 4px 4px 4px 7px;
     margin-top: 1em;
@@ -9,20 +9,27 @@
 .validacao-icone {
     position: absolute;
     width: 26px;
-    color: white;
     left: -29px;
 }
 
 .success {
     background-color: var(--success);
-    border: 1px solid var(--bordaSuccess);
-    border-left: 2em solid var(--bordaSuccess);
+    border: 1px solid var(--successBorda);
+    border-left: 2em solid var(--successBorda);
     color: var(--textoValidacao);
+}
+
+#success-icon {
+    color: var(--successIcon);
+}
+
+#failed-icon {
+    color: var(--failedIcon);
 }
 
 .failed {
     background-color: var(--failed);
-    border: 1px solid var(--bordaFailed);
-    border-left: 2em solid var(--bordaFailed);
+    border: 1px solid var(--failedBorda);
+    border-left: 2em solid var(--failedBorda);
     color: var(--textoValidacao);
 }

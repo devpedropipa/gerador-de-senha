@@ -3,8 +3,8 @@ interface PropsBotaoGerador {
     setNovaSenha: React.Dispatch<React.SetStateAction<string>>;
     checkBox: boolean[];
     tamanhoSenha: number;
-    esconderCardValidacao: React.Dispatch<React.SetStateAction<boolean>>;
-    frase: React.Dispatch<React.SetStateAction<string>>;
+    carregarCard: React.Dispatch<React.SetStateAction<boolean>>;
+    carregarFrase: React.Dispatch<React.SetStateAction<string>>;
     validacao: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
@@ -16,8 +16,8 @@ function gerarSenha(props: PropsBotaoGerador) {
         !props.checkBox[2] &&
         !props.checkBox[3]
     ) {
-        props.frase("Selecione no mínimo uma opção");
-        props.esconderCardValidacao(false);
+        props.carregarFrase("Selecione no mínimo uma opção.");
+        props.carregarCard(true);
         props.validacao(false);
     } else {
         const listaCaracteres = [
@@ -29,18 +29,18 @@ function gerarSenha(props: PropsBotaoGerador) {
         let senha = "";
         let c = 0;
         while (c < props.tamanhoSenha) {
-            const i = Math.floor(Math.random() * 4);
+            const indexLista = Math.floor(Math.random() * 4);
             const codigo = Math.floor(
-                Math.random() * listaCaracteres[i].length
+                Math.random() * listaCaracteres[indexLista].length
             );
 
-            if (props.checkBox[i]) {
-                senha += listaCaracteres[i].charAt(codigo);
+            if (props.checkBox[indexLista]) {
+                senha += listaCaracteres[indexLista].charAt(codigo);
                 c++;
             }
         }
         props.setNovaSenha(senha);
-        props.esconderCardValidacao(true);
+        props.carregarCard(false);
         props.validacao(true);
     }
 }

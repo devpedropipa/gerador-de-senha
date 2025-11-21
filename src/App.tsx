@@ -12,7 +12,7 @@ import padlockIcon from "./assets/icone-cadeado.png";
 import { InputGerador } from "./components/input-gerador";
 import { InputRange } from "./components/input-range";
 import { BotaoGerador } from "./components/botao-gerador";
-import { ConfigGerador } from "./components/config-gerador";
+import { CheckboxGerador } from "./components/config-gerador";
 import { CardValidacao } from "./components/card-validacao";
 
 /* Dependências */
@@ -26,7 +26,7 @@ function App() {
     const [checkNumero, setCheckNumero] = useState(false);
     const [checkSimbolo, setCheckSimbolo] = useState(false);
     const [senhaGerada, setSenhaGerada] = useState("");
-    const configGeradorSenha = [
+    const CheckboxGeradorSenha = [
         checkLetraMaiuscula,
         checkLetraMinuscula,
         checkNumero,
@@ -35,12 +35,12 @@ function App() {
 
     /* Variáveis de validação */
     const [fraseValidacao, setFraseValidacao] = useState("");
-    const [opacityCardValidacao, setOpacityCardValidacao] = useState(true);
+    const [cardValidacao, setCardValidacao] = useState(false);
     const [validarSenha, setValidarSenha] = useState(false);
 
     return (
         <main id="conteudo">
-            <img src={padlockIcon} alt="icone-cadeado" id="icone-cadeado" />
+            <img src={padlockIcon} alt="ícone-cadeado" id="icone-cadeado" />
             <h1>Gerador de Senha</h1>
 
             {/* Gerador de senhas */}
@@ -48,27 +48,27 @@ function App() {
                 <InputGerador
                     senha={senhaGerada}
                     validacao={setValidarSenha}
-                    esconderCardValidacao={setOpacityCardValidacao}
-                    frase={setFraseValidacao}
+                    carregarCard={setCardValidacao}
+                    carregarFrase={setFraseValidacao}
                 />
                 <InputRange tamanho={quantCar} setTamanho={setQuantCar} />
-                <div id="container-config">
-                    <ConfigGerador
+                <div id="container-checkbox">
+                    <CheckboxGerador
                         checkNome="Letra Maiúscula"
                         checkValue={checkLetraMaiuscula}
                         checkSet={setCheckLetraMaiuscula}
                     />
-                    <ConfigGerador
+                    <CheckboxGerador
                         checkNome="Letra Minúscula"
                         checkValue={checkLetraMinuscula}
                         checkSet={setCheckLetraMinuscula}
                     />
-                    <ConfigGerador
+                    <CheckboxGerador
                         checkNome="Número"
                         checkValue={checkNumero}
                         checkSet={setCheckNumero}
                     />
-                    <ConfigGerador
+                    <CheckboxGerador
                         checkNome="Símbolo"
                         checkValue={checkSimbolo}
                         checkSet={setCheckSimbolo}
@@ -76,18 +76,19 @@ function App() {
                 </div>
                 <BotaoGerador
                     setNovaSenha={setSenhaGerada}
-                    checkBox={configGeradorSenha}
+                    checkBox={CheckboxGeradorSenha}
                     tamanhoSenha={quantCar}
-                    esconderCardValidacao={setOpacityCardValidacao}
-                    frase={setFraseValidacao}
+                    carregarCard={setCardValidacao}
+                    carregarFrase={setFraseValidacao}
                     validacao={setValidarSenha}
                 />
             </div>
-            <CardValidacao
-                mostrarValidacao={opacityCardValidacao}
-                frase={fraseValidacao}
-                validacao={validarSenha}
-            />
+            {cardValidacao && (
+                <CardValidacao
+                    carregarFrase={fraseValidacao}
+                    validacao={validarSenha}
+                />
+            )}
         </main>
     );
 }

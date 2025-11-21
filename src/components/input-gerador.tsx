@@ -2,8 +2,8 @@
 interface PropsGerador {
     senha: string;
     validacao: React.Dispatch<React.SetStateAction<boolean>>;
-    esconderCardValidacao: React.Dispatch<React.SetStateAction<boolean>>;
-    frase: React.Dispatch<React.SetStateAction<string>>;
+    carregarCard: React.Dispatch<React.SetStateAction<boolean>>;
+    carregarFrase: React.Dispatch<React.SetStateAction<string>>;
 }
 
 /* Ícone de copiar */
@@ -30,13 +30,13 @@ export function InputGerador(props: PropsGerador) {
     function copiarSenha() {
         if (props.senha) {
             navigator.clipboard.writeText(props.senha);
-            props.frase("Senha copiada.");
-            props.esconderCardValidacao(false);
-            props.validacao(true)
+            props.carregarFrase("Senha copiada.");
+            props.carregarCard(true);
+            props.validacao(true);
         } else {
-            props.frase("A senha não foi gerada.");
-            props.esconderCardValidacao(false);
-            props.validacao(false)
+            props.carregarFrase("A senha não foi gerada.");
+            props.carregarCard(true);
+            props.validacao(false);
         }
     }
 
@@ -50,7 +50,9 @@ export function InputGerador(props: PropsGerador) {
                 placeholder="Sua senha aparecerá aqui"
                 readOnly
             />
-            <label id="icone-copiar" onClick={copiarSenha}><CopyIcon /></label>
+            <label id="icone-copiar" onClick={copiarSenha}>
+                <CopyIcon />
+            </label>
         </div>
     );
 }

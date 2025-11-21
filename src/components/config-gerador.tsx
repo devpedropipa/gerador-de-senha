@@ -1,12 +1,12 @@
 /* Interface do componente */
-interface PropsConfigGerador {
+interface PropsCheckboxGerador {
     checkNome: string;
     checkValue: boolean;
     checkSet: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 /* Opção de configuração do gerador */
-export function ConfigGerador(props: PropsConfigGerador) {
+export function CheckboxGerador(props: PropsCheckboxGerador) {
     return (
         <div className="container-check-config">
             <input
